@@ -12,8 +12,9 @@ const kilogramToPound = 2.20462
 convertBtn.addEventListener("click", function() {
    
    let baseLine = inputEl.value
-   lengthEl.innerHTML = `<p>${baseLine} meters = ${baseLine* meterToFeet.toFixed(4)} feet</p>`
-   volumeEl.innerHTML = `<p>${baseLine} liters = ${baseLine* literToGallon.toFixed(4)} gallons</p>`
-   massEl.innerHTML = `<p>${baseLine} kilograms = ${baseLine* kilogramToPound.toFixed(4)} pounds</p>`
+   lengthEl.innerHTML = `<p>${baseLine} meters = ${(baseLine* meterToFeet).toFixed(3)} feet</p>`
+   volumeEl.innerHTML = `<p>${baseLine} liters = ${(baseLine* literToGallon).toFixed(3)} gallons</p>`
+   massEl.innerHTML = `<p>${baseLine} kilograms = ${(baseLine* kilogramToPound).toFixed(3)} pounds</p>`
    
+   inputEl.value = "<input type = 'number' placeholder = '0'>"
 })
